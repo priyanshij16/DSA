@@ -1,0 +1,28 @@
+Count Maximum Consecutive One's in the array:
+
+ int cnt = 0;
+      int maxi = 0;
+      for (int i = 0; i < nums.size(); i++) {
+        if (nums[i] == 1) {
+          cnt++;
+        } else {
+          cnt = 0;
+        }
+
+        maxi = max(maxi, cnt);
+      }
+      return maxi;
+
+    Q2 136. Single Number
+  Input: nums = [4,1,2,1,2]
+Output: 4
+
+        // 1 try brute force in that 
+        // try using hashmaps 
+        //3 using xor >> optimal 
+        
+        int count=0;
+        for(int i=0;i<nums.size();i++){
+            count=count^nums[i];
+        }
+        return count;
