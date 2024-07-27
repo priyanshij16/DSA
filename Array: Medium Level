@@ -1,0 +1,28 @@
+Q1 2sum:
+   Brute Force::
+    by running 2 loops:
+     i=0<n 
+     j=i+1<n
+     if(a[i] +a[j]==target)
+     return 'Yes'
+    else return 'No'
+
+   Optimised by 2 Pointer approach :
+ class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int> maps;
+        int n= nums.size();
+
+        int complement;
+        for(int i=0;i<n;i++){
+            complement= target-nums[i];
+            if (maps.count(complement)) {
+                 return {maps[complement], i};
+            }
+            maps[nums[i]]=i;
+        }
+        return {};
+    }
+Q2 Sort 0,1,2 arrays:
+
