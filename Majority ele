@@ -1,0 +1,18 @@
+Problem 169 Majority Ele :
+Input: nums = [3,2,3]
+Output: 3
+
+Solution:
+ Brute force approoach :
+Use 2 Nested Loops 
+commpare for each interation if it is same or not. 
+return by using store it in a vector 
+
+Better Approach :
+use Sorting 
+compare previous array of ele   and the current 
+
+Optimal :
+Moore's Voting Algo
+
+
